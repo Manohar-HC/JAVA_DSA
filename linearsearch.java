@@ -1,27 +1,30 @@
-public class linearsearch{
-//     public static void main(String[] args) {
-        
-// int[] arr={ 4,9,2,7,5};
-// int target=7;
+public class linearsearch{//creat a class
 
-// for( int i=0; i<arr.length; i++){
-//     if(arr[i]==target){
 
-//         System.out.println("target is "+i);
-//     }
-    
-// }
-//     }
-public static void main(String[] args) {
-    
-    int[] arr={8,3,12,5};
-    int target=12;
+    public static int search(int[] arr, int target){//Create a method called search
 
-for(int i=0; i<arr.length; i++){
+        for(int i = 0; i < arr.length; i++){
+/*Linear Search returns:
 
-if(arr[i]==target){
-    System.out.println("target is"+i);
-}
-}
-}
+index of the element
+
+NOT the value.*/
+
+            if(arr[i] == target){
+                return i;
+            }
+
+        }
+
+        return -1;
+    }
+
+    public static void main(String[] args) {
+
+        int[] arr = {4,9,2,7};
+
+        int result = search(arr, 2);
+
+        System.out.println(result);
+    }
 }
